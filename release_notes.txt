@@ -1,0 +1,4 @@
+Package: pdac-alert-wedge
+Scope: structured EHR temporal risk modeling, alert workflow analysis, stepped-wedge estimators, pathway benefit calculus, and economic evaluation.
+Files intentionally use text documentation rather than markdown files.
+Continuous integration workflow files are intentionally absent.

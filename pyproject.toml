@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdac-alert-wedge"
+version = "0.1.0"
+description = "EHR early warning deployment analysis package"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy==2.3.1",
+  "pandas==2.3.0",
+  "scipy==1.16.0",
+  "scikit-learn==1.7.0",
+  "statsmodels==0.14.5",
+  "torch==2.9.0",
+  "PyYAML==6.0.2"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["checks"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "checks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+mypy_path = "src"
+ignore_missing_imports = true

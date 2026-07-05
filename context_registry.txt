@@ -1,0 +1,48 @@
+Project Context
+project_name       : pdac_alert_wedge [HIGH]
+domain             : clinical decision support, pancreatic cancer early detection, EHR temporal risk modeling, stepped-wedge deployment analysis [HIGH]
+framework          : PyTorch temporal Transformer for risk scoring; Python statistical estimators mirroring R lme4 and hesim analyses [MEDIUM]
+venue              : npj Digital Medicine format inferred from title, references, and cited journal style [MEDIUM]
+primary_datasets   : 0 public datasets; protected operational EHR data only [HIGH]
+compute_target     : training hardware not reported; deployment scale uses nightly scoring over 180248 eligible adults and a model trained on more than 2000000 patients with more than 8000 PDAC cases [MEDIUM]
+hparams_reference  : Supplementary Table S4 gives architecture class, modalities, lookback, horizon, threshold, validation and deployment details; optimizer, batch size, epochs, learning rate and scheduler are not reported [LOW]
+supp_path          : embedded supplementary information in the same PDF [HIGH]
+extra_signals      : frozen model, FHIR R4 abstraction, 99.5th percentile alert threshold, 99.9th urgent tier, no public model weights, data request only
+
+Derived Fields
+1 project_name
+value: pdac_alert_wedge
+location: title and abstract
+confidence: HIGH
+2 supp_path
+value: embedded supplementary information in main PDF
+location: pages labelled Supplementary Information, Supplementary Table S2, Supplementary Table S4, Supplementary Note 1
+confidence: HIGH
+3 domain
+value: EHR-based pancreatic cancer early warning and stepped-wedge clinical deployment evaluation
+location: title, abstract, Methods study design
+confidence: HIGH
+4 framework
+value: PyTorch temporal Transformer plus Python statistical analysis modules
+location: Methods AI early warning system and Supplementary Table S4 state Transformer-based temporal model; Methods statistical analysis states R lme4 and hesim, implemented here with Python equivalents
+confidence: MEDIUM
+5 venue
+value: npj Digital Medicine
+location: bibliography and article formatting cite npj Digital Medicine examples and Nature portfolio style
+confidence: MEDIUM
+6 primary_datasets
+value: protected operational EHR from 20 sites; no public dataset URL; aggregate summary statistics only
+location: Methods setting and participants; Data availability
+confidence: HIGH
+7 compute_target
+value: COMPUTE_NOT_REPORTED; upper bound assumes nightly scoring for 180248 adults, 36-month lookback, structured events only, top 0.5 percent threshold yielding 2847 alerts; training cohort exceeds 2000000 patients and 8000 PDAC cases
+location: Results population; Supplementary Table S4; Methods AI early warning system
+confidence: MEDIUM
+8 hparams_reference
+value: Supplementary Table S4 reports model family, inputs, 36-month lookback, 12-month horizon, training population, validation, 99.5th threshold and nightly scoring; optimizer and training schedule are not stated
+location: Supplementary Table S4, Methods AI early warning system
+confidence: LOW
+9 extra_signals
+value: FHIR R4, locked model, no imaging notes or genomics, DECIDE-AI checklist, fairness subgroups, Markov cost-effectiveness model, four sensitivity analyses
+location: Methods, Tables 2 through 8
+confidence: HIGH

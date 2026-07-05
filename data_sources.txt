@@ -1,0 +1,5 @@
+No public dataset link is available for the primary analytic data.
+The study data derive from protected operational EHR records and are not deposited in a public repository.
+De-identified analytic datasets and aggregate summary statistics require author review, data use agreement, and applicable privacy review.
+The model weights are not publicly distributable because the training source contains protected health information.
+No dataset URL is included here because the manuscript does not provide a public dataset endpoint to verify.
